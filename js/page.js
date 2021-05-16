@@ -18,10 +18,11 @@ function paslepk_raudona() {
 var a = 200;
 let b = 'TEKSTINIS KINTAMASIS b'
 const c = 19
+var d = ['a', 12, 'c']
 
 // document.write('new text');
 
 // alert('hello');
 
 // Log if js successfully imported
-console.log('JS FUNCTIONS LOADED SUCCESFULLY!', a, b, c);
+console.log('JS FUNCTIONS LOADED SUCCESFULLY!', a, b, c, d);
