@@ -1,0 +1,59 @@
+body {
+    margin: 25px;
+    background-color: rgb(240,240,240);
+    font-family: arial, sans-serif;
+    font-size: 14px;
+}
+
+span {
+    color: blue;
+}
+
+.raudona {
+    color: red;   
+}
+
+.zalia {
+    color: green;   
+}
+
+.hidden {
+    /* display: none; */
+    position: absolute;
+    right: 150px;
+}
+
+.shown {
+    /* display: block; */
+    position: absolute;
+    left: 100px;
+}
+
+.pasteline_kortele {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+.pasteline_kortele :first-child {
+    border: 10px solid black;
+    color: blue;
+}
+
+#x {
+    height: 300px;
+ }
+
+ a[title=wiki_link1] {
+    text-shadow: 2px 2px 8px #FF0000;
+ }
+
+a[title=wiki_link1]:hover {
+    color: yellow;
+} /* mouse over element */
+
+#spausk :first-child {
+    background: yellow;
+}
