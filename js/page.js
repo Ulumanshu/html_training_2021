@@ -28,13 +28,12 @@ var int_num = parseInt(str_num, 10)
 var sum_1 = a + int_num;
 var sum_2 = a + str_num;
 
-
 console.log("SUMA1", sum_1);
 console.log("SUMA21", sum_2);
 
-
-
-
+// typeof nustatyti kintamojo tipui! Daznai prireikia.
+console.log("SUMA1 TIPAS", typeof sum_1);
+console.log("SUMA2 TIPAS", typeof sum_2);
 
 // document.write('new text');
 
