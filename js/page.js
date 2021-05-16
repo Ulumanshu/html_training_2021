@@ -16,6 +16,7 @@ function paslepk_raudona() {
 };
 // JS KINTAMIEJI
 var a = 200;
+var str_num = '3';
 let b = 'TEKSTINIS KINTAMASIS b';
 const c = 19;
 var d = ['a', 12, 'c'];
@@ -23,9 +24,13 @@ var e = 5;
 var client_list = Array()
 client_list.push("Kiwi");
 var sar_ilgis = client_list.push("Kiwi2", "Kiwi3", '4', 14, {'vardas': 'Petras'});
-var sum_1 = a + d;
+var int_num = parseInt(str_num, 10)
+var sum_1 = a + int_num;
+var sum_2 = a + str_num;
+
 
 console.log("SUMA1", sum_1);
+console.log("SUMA21", sum_2);
 
 
 
