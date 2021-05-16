@@ -9,3 +9,6 @@ function paslepk_raudona() {
         element.classList.add('hidden');
     }
 };
+document.write ("what");
+alert ("hello");
+console.log ("It's Alive")
