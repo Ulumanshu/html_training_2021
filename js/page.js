@@ -16,13 +16,14 @@ function paslepk_raudona() {
 };
 // JS KINTAMIEJI
 var a = 200;
-let b = 'TEKSTINIS KINTAMASIS b'
-const c = 19
-var d = ['a', 12, 'c']
+let b = 'TEKSTINIS KINTAMASIS b';
+const c = 19;
+var d = ['a', 12, 'c'];
+var e = 5;
 
 // document.write('new text');
 
 // alert('hello');
 
 // Log if js successfully imported
-console.log('JS FUNCTIONS LOADED SUCCESFULLY!', a, b, c, d);
+console.log('JS FUNCTIONS LOADED SUCCESFULLY!', a, b, c, d, e);
