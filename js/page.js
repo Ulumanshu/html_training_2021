@@ -9,3 +9,9 @@ function paslepk_raudona() {
         element.classList.add('hidden');
     }
 };
+
+document.write('new text');
+
+alert('hello');
+
+console.log('it works');
