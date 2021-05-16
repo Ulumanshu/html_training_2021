@@ -22,7 +22,7 @@ var d = ['a', 12, 'c'];
 var e = 5;
 var client_list = Array()
 client_list.push("Kiwi");
-client_list.push("Kiwi2");
+client_list.push("Kiwi2", "Kiwi3", '4', 14, {'vardas': 'Petras'});
 
 // document.write('new text');
 
