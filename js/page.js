@@ -46,7 +46,12 @@ console.log("Object2", dict_var2, typeof dict_var2);
 // undefined - when a variable that has not been declared or initialized.
 
 //########################################################
+// Buil in functions
+let paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
 
+let searchTerm = 'dog';
+let indexOfFirst = paragraph.indexOf(searchTerm);
+console.log('DOG found in ', paragraph, "at position: ", indexOfFirst);
 
 
 var a = 200;
