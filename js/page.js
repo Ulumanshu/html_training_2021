@@ -1,3 +1,8 @@
+/* 
+   funkcija skirta mygtukui Paspausk mane, perkelia raudona teksta i kaire ir i desine
+   brebrethtrntrntrntrnrtntrnmnrtntnrtnrtntrnntrnr ......................................
+   .....................................................................................
+ */
 function paslepk_raudona() {
     var element = document.getElementById("xx");
     console.log("MUSU ELEMENTAS: ", element, element.classList, element.classList.contains('hidden'));
@@ -10,8 +15,9 @@ function paslepk_raudona() {
     }
 };
 
-document.write('new text');
+// document.write('new text');
 
-alert('hello');
+// alert('hello');
 
-console.log('it works');
+// Log if js successfully imported
+console.log('JS FUNCTIONS LOADED SUCCESFULLY!');
