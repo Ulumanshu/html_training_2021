@@ -14,7 +14,20 @@ function paslepk_raudona() {
         element.classList.add('hidden');
     }
 };
-// JS KINTAMIEJI
+// JS KINTAMIEJI #####################################################
+// SIMPLE TYPES
+//NUMBERS
+var num_integer = 4;
+var num_float = 4.56;
+// String -text
+var str_1 = "I am string";
+// Booleans true - false
+var blool_1 = false;
+
+//########################################################
+
+
+
 var a = 200;
 var str_num = '3';
 let b = 'TEKSTINIS KINTAMASIS b';
