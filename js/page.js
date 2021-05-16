@@ -52,7 +52,11 @@ let paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barked,
 let searchTerm = 'dog';
 let indexOfFirst = paragraph.indexOf(searchTerm);
 console.log('DOG found in ', paragraph, "at position: ", indexOfFirst);
+let long_word = "Sub Sacharan Desert";
 
+let split_string = long_word.substr(4);
+console.log('Padalintas tekstas', split_string);
+// ##################################################################################
 
 var a = 200;
 var str_num = '3';
