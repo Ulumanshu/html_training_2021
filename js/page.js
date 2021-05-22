@@ -147,4 +147,6 @@ console.log("MES GAVOME", vardas);
 // Git confict
 //bla bla bkla
 //asas
-
+function confict_function(a) {
+    return a * a
+};
