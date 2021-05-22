@@ -160,3 +160,16 @@ function first_function (aa,bb=4,cc){
 }
 console.log(first_function(aa,bb,cc), "Pirmoji funkcija");
 
+let x;
+let func;
+
+var test = function(x){
+    return x * 5;
+}
+// Y is actually X
+function test2 (y, func){
+    return func(y);
+}
+
+var callBackFunc = test2(10,test);
+console.log(callBackFunc);
