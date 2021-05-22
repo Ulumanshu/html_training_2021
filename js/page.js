@@ -257,3 +257,13 @@ function pridek_prie_globalaus(kiekis) {
 };
 console.log('GLOBAL: ', mano_globalus_kintamasis)
 
+function recursion1(x){
+    console.log(x);
+
+    //condition to prevent an endless loop
+    if(x > 0){
+        recursion1(x - 1); //function calls itself
+    }
+}
+
+recursion1(5);
