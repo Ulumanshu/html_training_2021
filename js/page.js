@@ -195,3 +195,18 @@ function executing_function(data, callback_func) {
 let res3 = executing_function(13, callback_log);
 console.log(res3, "RES3")
 
+var count = (function () {
+    var counter = 0;
+    return function () {
+        console.log(counter);
+        return counter += 1;
+    }
+})();
+
+//calling the closure function
+count(); //1
+count(); //2
+
+//variable is not accessible outside the closure
+// console.log(counter); //undefined
+console.log(count); //undefined
