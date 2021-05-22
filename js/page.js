@@ -160,6 +160,8 @@ function first_function (aa,bb=4,cc){
 }
 console.log(first_function(aa,bb,cc), "Pirmoji funkcija");
 
+//CallBack
+
 let x;
 let func;
 
