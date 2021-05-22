@@ -172,8 +172,13 @@ var test = function(x){
 // func(Y) is actually function(X)
 
 function test2 (y, func){
+
+    // šitoje vietoje func(y) y reikšmė iš esmės bus function(x) x reikšmė
     return func(y);
 }
-
+// skliaustuose reikšmė 10 bus function(x) x=10
 var callBackFunc = test2(10,test);
 console.log(callBackFunc);
+
+///////////////////////////////////
+
