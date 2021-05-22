@@ -166,7 +166,8 @@ let func;
 var test = function(x){
     return x * 5;
 }
-// Y is actually X
+// func(Y) is actually function(X)
+//
 function test2 (y, func){
     return func(y);
 }
