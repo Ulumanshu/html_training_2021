@@ -210,3 +210,38 @@ count(); //2
 //variable is not accessible outside the closure
 // console.log(counter); //undefined
 console.log(count); //undefined
+
+// Variables
+
+var obj = { name: "pencil", price: 10};
+var x = 15;
+
+function change(product, newPrice){
+    //changes object's property
+    product.price = newPrice;
+    console.log("LOCAL SCOPE: ", product)
+    //changes variable's value
+    newPrice = 0;
+}
+change(obj, x); //function call
+console.log("GLOBAL SCOPE", obj); //object has changed
+console.log(x); //variable has NOT changed
+
+let aa = [1, 2, 3];
+let bb = aa;
+
+function change_reference(a) {
+    a.push(4)
+};
+change_reference(aa)
+console.log('REFERENCES', aa, bb)
+
+let aaa = 1;
+let bbb = aaa;
+aaa = 2;
+
+function change_value(a) {
+    a = a - 10
+};
+change_value(aaa)
+console.log('VALUES', aaa, bbb);
