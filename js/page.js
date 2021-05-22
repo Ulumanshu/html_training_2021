@@ -245,3 +245,15 @@ function change_value(a) {
 };
 change_value(aaa)
 console.log('VALUES', aaa, bbb);
+
+let mano_globalus_kintamasis = 30;
+pridek_prie_globalaus(mano_globalus_kintamasis);
+function pridek_prie_globalaus(kiekis) {
+    let res = mano_globalus_kintamasis + kiekis;
+
+    window['mano_globalus_kintamasis'] = res; // or window.a
+    console.log("RES GLOBAL", res);
+    // return res
+};
+console.log('GLOBAL: ', mano_globalus_kintamasis)
+
