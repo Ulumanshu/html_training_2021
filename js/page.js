@@ -307,20 +307,32 @@ document.addEventListener("DOMContentLoaded", function(event){
 
     function list_paragraphs() {
         //uzdavinio turinys
+        // Sukurtas objetas atvaizduoti rezultatui
         let result_object = {};
+        // divu paieshka visam dokumente, grazinami HTMLCollection tipo objectai
+        // ant kuriu veikia visi tei patys getElementsBy metodai, ir jie grazina irgi HTMLCollection
         let visi_divai_su_klase_x = document.getElementsByClassName('pasteline_kortele');
         console.log("GET ELEMENT BY KAZKAS GRAZINA SITO TIPO OBJEKTUS, ", visi_divai_su_klase_x)
+        // su .from funcija saraso galima HTMLCollection pasiversti i sarasa, kad butu galima forinti:)
         var arr = Array.from(visi_divai_su_klase_x);
+        // sukurtas kintamasis, kad jam butu galima priskirti atitikusi diva.
         let target_div = false;
+        // loopas kur ziurin kurio divo antrastej yra musu ieshkomas tekstas innerText!!!! labai pravartus tam
         for (i = 0; i < arr.length; i++) {
             let current_div = arr[i]
             if (current_div.innerText.includes("DIDELE ANTRASTE")) {
+                // jei salyga atitina priskiriam
                 target_div = current_div;
             }
         };
+        // jei kazka rado
         if (target_div) {
+            // tas pats HTMLCollection paverciam sarasu kad butu galima praloopinti 
+            // jeigu butume teisingi truksta 2ju ifu dar nes target_div.getElementsByTagName("OL") gali nieko ir nerasti
+            // tas pats su ol_list.children
             var ol_list = target_div.getElementsByTagName("OL")[0];
             console.log(ol_list);
+            // Rasto ordered listo vaiku teksta surenkam i objekta
             var ol_children = Array.from(ol_list.children)
             for (i = 0; i < ol_children.length; i++) {
                 let current_li = ol_children[i]
