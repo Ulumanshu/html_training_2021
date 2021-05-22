@@ -257,6 +257,7 @@ function pridek_prie_globalaus(kiekis) {
 };
 console.log('GLOBAL: ', mano_globalus_kintamasis)
 
+// Recursion
 function recursion1(x){
     console.log(x);
 
@@ -267,7 +268,7 @@ function recursion1(x){
 }
 
 recursion1(5);
-
+// Objects
 function car(brand, model, year, mileage, top_speed){
     this.brand = brand;
     this.model = model;
@@ -287,3 +288,17 @@ auto1.launch(); //access the object's method
 auto2.launch(); //access the object's method
 
 auto2.year = auto1.year; //access the object's property
+console.log("AUTO! OBJ: ", auto1);
+
+// JSON
+
+// Convert to JSON
+var json_objx = JSON.stringify(auto1); 
+console.log("AUTO1 JSON", json_objx)
+
+// Reconver to object, for example something we get from backend
+var reconverted = JSON.parse(json_objx);
+var total_reconvert = new car(reconverted.brand, reconverted.model, reconverted.year, reconverted.mileage, reconverted.top_speed);
+
+console.log("AUTO1 RECONVERTED OBJ", reconverted);
+console.log(total_reconvert);
