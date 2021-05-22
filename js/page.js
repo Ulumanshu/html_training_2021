@@ -267,3 +267,23 @@ function recursion1(x){
 }
 
 recursion1(5);
+
+function car(brand, model, year, mileage, top_speed){
+    this.brand = brand;
+    this.model = model;
+    this.top_speed = top_speed;
+    this.year = year;
+    this.mileage = mileage;
+    this.launch = function(){
+        console.log(`New ${this.brand} - ${this.model} went out of garrage at astounding ${this.top_speed} km/h.`);
+        console.log('New ' +this.brand + ' ' + this.model + ' went out of garrage at astounding ' + this.top_speed + ' km/h.');
+    }
+}
+
+var auto1 = new car("fiat","500",2018,10000, 180);
+var auto2 = new car("opel","corsa",2010,100000, 200);
+
+auto1.launch(); //access the object's method
+auto2.launch(); //access the object's method
+
+auto2.year = auto1.year; //access the object's property
