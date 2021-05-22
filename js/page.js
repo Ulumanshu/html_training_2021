@@ -90,10 +90,7 @@ console.log('Padalintas tekstas', split_string);
 
 // Log if js successfully imported
 // console.log('JS FUNCTIONS LOADED SUCCESFULLY!', a, b, c, d, e, client_list, sar_ilgis);
-document.addEventListener("DOMContentLoaded", function(event){
-    var rezult = paslepk_raudona('pirmas', 'antras');
-    console.log('KVIETIMO REZAS', rezult);
-});
+
 
 let a = 10
 let b = 10
@@ -303,8 +300,32 @@ var total_reconvert = new car(reconverted.brand, reconverted.model, reconverted.
 console.log("AUTO1 RECONVERTED OBJ", reconverted);
 console.log(total_reconvert);
 
-function list_paragraphs() {
-    //uzdavinio turinys
-    console.log('REZULTATO OBJEKTAS')
-};
-list_paragraphs();
+
+document.addEventListener("DOMContentLoaded", function(event){
+    var rezult = paslepk_raudona('pirmas', 'antras');
+    console.log('KVIETIMO REZAS', rezult);
+
+    function list_paragraphs() {
+        //uzdavinio turinys
+        let result_object = {};
+        let visi_divai_su_klase_x = document.getElementsByClassName('pasteline_kortele');
+        var arr = Array.from(visi_divai_su_klase_x);
+        let target_div = false;
+        for (i = 0; i < arr.length; i++) {
+            let current_div = arr[i]
+            if (current_div.innerText.includes("DIDELE ANTRASTE")) {
+                target_div = current_div;
+            }
+        };
+        var ol_list = document.getElementsByTagName("OL")[0];
+        console.log(ol_list);
+        var ol_children = Array.from(ol_list.children)
+        for (i = 0; i < ol_children.length; i++) {
+            let current_li = ol_children[i]
+            let current_li_text = current_li.innerText
+            result_object[i] = current_li_text;
+        };
+        console.log("TEST UZD1: ",result_object);
+    };
+    list_paragraphs();
+});
