@@ -302,3 +302,9 @@ var total_reconvert = new car(reconverted.brand, reconverted.model, reconverted.
 
 console.log("AUTO1 RECONVERTED OBJ", reconverted);
 console.log(total_reconvert);
+
+function list_paragraphs() {
+    //uzdavinio turinys
+    console.log('REZULTATO OBJEKTAS')
+};
+list_paragraphs();
