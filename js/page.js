@@ -148,3 +148,15 @@ console.log("MES GAVOME", vardas);
 //bla bla bkla
 //asas
 
+let aa = 100;
+let bb ;
+let cc = 20;
+
+function first_function (aa,bb=4,cc){
+    let first_sum = aa * bb;
+    let second_sum = cc;
+    let all_sum = first_sum + second_sum;
+    return all_sum;
+}
+console.log(first_function(aa,bb,cc), "Pirmoji funkcija");
+
