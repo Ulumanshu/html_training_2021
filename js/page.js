@@ -177,3 +177,21 @@ function go(n, func){
 //calling the function
 let callback_res = go(10, f);
 console.log('CALLBACK EXAMPLE: ', callback_res);
+
+
+
+let callback_log = function callback_report(res) {
+    console.log("SUMMED!", res)
+    return res * 2;
+};
+
+
+function executing_function(data, callback_func) {
+    let result = data * 10;
+    let callback_res = callback_func(result);
+    return result + callback_res;
+};
+
+let res3 = executing_function(13, callback_log);
+console.log(res3, "RES3")
+
