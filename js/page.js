@@ -3,7 +3,11 @@
    brebrethtrntrntrntrnrtntrnmnrtntnrtnrtntrnntrnr ......................................
    .....................................................................................
  */
-function paslepk_raudona() {
+function paslepk_raudona(arg1, arg2) {
+    console.log(arg1, arg2);
+    if (!arg1 || !arg2) {
+        alert('TRUKSTA ARGUMENTU!!!!');
+    }
     var element = document.getElementById("xx");
     console.log("MUSU ELEMENTAS: ", element, element.classList, element.classList.contains('hidden'));
     if (element.classList.contains('hidden')) {
@@ -13,6 +17,8 @@ function paslepk_raudona() {
         element.classList.remove('shown');
         element.classList.add('hidden');
     }
+
+    return element;
 };
 // JS KINTAMIEJI #####################################################
 // SIMPLE TYPES
@@ -58,29 +64,59 @@ let split_string = long_word.substr(4);
 console.log('Padalintas tekstas', split_string);
 // ##################################################################################
 
-var a = 200;
-var str_num = '3';
-let b = 'TEKSTINIS KINTAMASIS b';
-const c = 19;
-var d = ['a', 12, 'c'];
-var e = 5;
-var client_list = Array()
-client_list.push("Kiwi");
+// var a = 200;
+// var str_num = '3';
+// let b = 'TEKSTINIS KINTAMASIS b';
+// const c = 19;
+// var d = ['a', 12, 'c'];
+// var e = 5;
+// var client_list = Array()
+// client_list.push("Kiwi");
 
-var int_num = parseInt(str_num, 10)
-var sum_1 = a + int_num;
-var sum_2 = a + str_num;
+// var int_num = parseInt(str_num, 10)
+// var sum_1 = a + int_num;
+// var sum_2 = a + str_num;
 
-console.log("SUMA1", sum_1);
-console.log("SUMA21", sum_2);
+// console.log("SUMA1", sum_1);
+// console.log("SUMA21", sum_2);
 
-// typeof nustatyti kintamojo tipui! Daznai prireikia.
-console.log("SUMA1 TIPAS", typeof sum_1);
-console.log("SUMA2 TIPAS", typeof sum_2);
+// // typeof nustatyti kintamojo tipui! Daznai prireikia.
+// console.log("SUMA1 TIPAS", typeof sum_1);
+// console.log("SUMA2 TIPAS", typeof sum_2);
 
-// document.write('new text');
+// // document.write('new text');
 
-// alert('hello');
+// // alert('hello');
 
 // Log if js successfully imported
-console.log('JS FUNCTIONS LOADED SUCCESFULLY!', a, b, c, d, e, client_list, sar_ilgis);
+// console.log('JS FUNCTIONS LOADED SUCCESFULLY!', a, b, c, d, e, client_list, sar_ilgis);
+document.addEventListener("DOMContentLoaded", function(event){
+    var rezult = paslepk_raudona('pirmas', 'antras');
+    console.log('KVIETIMO REZAS', rezult);
+});
+
+let a = 10
+let b = 10
+let c = 5
+
+// a + b / c
+function functional_programming_function (a, b, c) {
+    return division_ab(sum_ab(a, b), c)
+};
+
+function sum_ab (a, b) {
+    return a + b
+};
+
+function division_ab (a, b) {
+    return a / b
+};
+
+console.log(functional_programming_function(a, b, c), "MUSU FUNCINIS")
+
+function algebra2 (a, b, c) {
+    let sum1 = a + b;
+    let result = sum1 / c;
+    return result
+}
+console.log(algebra2(a, b, c), "MUSU IPRASTA FUNCIJA")
