@@ -150,3 +150,9 @@ console.log("MES GAVOME", vardas);
 function confict_function(a) {
     return a * a
 };
+function confict_functionkarolis(a) {
+    return a * a
+};
+function confict_functionkarolis(a) {
+    return a * a
+};
