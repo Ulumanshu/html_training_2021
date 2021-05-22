@@ -99,16 +99,17 @@ let a = 10
 let b = 10
 let c = 5
 
+// let res = (a + b) / c
 // a + b / c
-function functional_programming_function (a, b, c) {
+function functional_programming_function(a, b, c) {
     return division_ab(sum_ab(a, b), c)
 };
 
-function sum_ab (a, b) {
+function sum_ab(a, b) {
     return a + b
 };
 
-function division_ab (a, b) {
+function division_ab(a, b) {
     return a / b
 };
 
@@ -120,3 +121,25 @@ function algebra2 (a, b, c) {
     return result
 }
 console.log(algebra2(a, b, c), "MUSU IPRASTA FUNCIJA")
+
+let anonymous = function(a) {return a * 2};
+let arrow_f = (a) => a * 2;
+console.log(anonymous(a), "Anonimine funcija");
+console.log(arrow_f(a), "Arrow funcija (neturi savo this (svarbu - naudinga veliau))");
+
+
+// SCOPES
+
+const person_name = "Lydia";
+function get_person_data(name_) {   
+    const person_name = "Laima";
+    function get_name() {
+        return person_name;
+    };
+    console.log(person_name, 'LOCAL');
+    return get_name();
+};
+
+let vardas = get_person_data(person_name);
+console.log("MES GAVOME", vardas);
+// https://dev.to/lydiahallie/javascript-visualized-scope-chain-13pd
