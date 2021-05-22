@@ -182,3 +182,19 @@ console.log(callBackFunc);
 
 ///////////////////////////////////
 
+//Counter skaičiuoja
+var count = (function (){
+    var counter = 0;
+    return function (){
+        console.log(counter);
+        return counter += 1;
+    }
+})();
+count();//0
+count();//1
+count();//2
+
+console.log(count);
+
+///////////////////////////////
+
