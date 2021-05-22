@@ -309,6 +309,7 @@ document.addEventListener("DOMContentLoaded", function(event){
         //uzdavinio turinys
         let result_object = {};
         let visi_divai_su_klase_x = document.getElementsByClassName('pasteline_kortele');
+        console.log("GET ELEMENT BY KAZKAS GRAZINA SITO TIPO OBJEKTUS, ", visi_divai_su_klase_x)
         var arr = Array.from(visi_divai_su_klase_x);
         let target_div = false;
         for (i = 0; i < arr.length; i++) {
@@ -317,14 +318,17 @@ document.addEventListener("DOMContentLoaded", function(event){
                 target_div = current_div;
             }
         };
-        var ol_list = document.getElementsByTagName("OL")[0];
-        console.log(ol_list);
-        var ol_children = Array.from(ol_list.children)
-        for (i = 0; i < ol_children.length; i++) {
-            let current_li = ol_children[i]
-            let current_li_text = current_li.innerText
-            result_object[i] = current_li_text;
+        if (target_div) {
+            var ol_list = target_div.getElementsByTagName("OL")[0];
+            console.log(ol_list);
+            var ol_children = Array.from(ol_list.children)
+            for (i = 0; i < ol_children.length; i++) {
+                let current_li = ol_children[i]
+                let current_li_text = current_li.innerText
+                result_object[i] = current_li_text;
+            };
         };
+       
         console.log("TEST UZD1: ",result_object);
     };
     list_paragraphs();
