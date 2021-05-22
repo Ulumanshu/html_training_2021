@@ -143,16 +143,8 @@ function get_person_data(name_) {
 let vardas = get_person_data(person_name);
 console.log("MES GAVOME", vardas);
 // https://dev.to/lydiahallie/javascript-visualized-scope-chain-13pd
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-// Git confict
-=======
-bla bla bkla
->>>>>>> Stashed changes
-=======
 
 // Git confict
+//bla bla bkla
+//asas
 
-asas
-
->>>>>>> 235e739fa8f6b0b3f613c1f8167f24120b7c0523
