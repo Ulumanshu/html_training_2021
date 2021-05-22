@@ -162,3 +162,18 @@ function confict_function(a) {
 function confict_function(a) {
     return a * a
 };
+
+// Callbacks
+//anonymous function, doing something
+var f = function(a){
+    return a * 5;
+}
+
+//function, accepting callback as argument
+function go(n, func){
+    return func(n);
+}
+
+//calling the function
+let callback_res = go(10, f);
+console.log('CALLBACK EXAMPLE: ', callback_res);
